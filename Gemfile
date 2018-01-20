@@ -15,9 +15,14 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'devise'
+gem 'rest-client'
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
