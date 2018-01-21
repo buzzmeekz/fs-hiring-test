@@ -1,0 +1,8 @@
+<h1>Motels#index</h1>
+<p>Find me in app/views/motels/index.html.erb</p>
+
+<% @motels.each do |motel| %>
+  <h3><%= motel.name %></h3>
+  <img src="<%= motel.logo %>" alt="<%= motel.name %>">
+<% end %>
+

@@ -11,7 +11,7 @@ response = RestClient.get "https://luvotels-hiring-api.herokuapp.com/motels.json
 motels = JSON.parse(response)
 
 motels.each do |motel|
-  pw = Faker::Internet.password(8)
+  pw = "luvcode6"
   user = User.create(
     email: Faker::Internet.email,
     password: pw,
