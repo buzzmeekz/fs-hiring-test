@@ -1,0 +1,13 @@
+<h1 class="text-center">Recent Bookings</h1>
+<hr>
+<div class="messages-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <% @bookings.each do |booking| %>
+        <%= render "shared/item", booking: booking %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/item-modal' %>
