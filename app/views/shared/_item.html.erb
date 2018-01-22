@@ -1,0 +1,15 @@
+<%= link_to booking_path(booking.id), remote: true do %>
+<div class="message">
+  <div class="message-name">
+    <h3><%= booking.paid_at.to_time.strftime("%b").upcase %></h3>
+    <p><%= booking.paid_at.to_time.strftime("%d") %></p>
+  </div>
+  <div class="message-body">
+    <p><strong><%= booking.room.name %><span class="hidden-sm hidden-xs"> - <%= booking.booking_period %></span></strong></p>
+    <p><%= booking.motel.name %></p>
+  </div>
+  <div class="message-status">
+    <p class="price"><%= '%.2f' % (booking.amount_centavos / 100) %> BRL</p>
+  </div>
+</div>
+<% end %>
