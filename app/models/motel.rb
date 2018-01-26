@@ -1,5 +1,5 @@
 class Motel < ApplicationRecord
-  has_many :rooms, dependent: :destroy
-  has_many :bookings, dependent: :destroy
+  has_many :rooms
+  has_many :bookings
   belongs_to :user
 end

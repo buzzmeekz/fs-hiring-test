@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
 
+gem 'activeresource'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
@@ -20,6 +21,7 @@ gem 'devise'
 gem 'devise-bootstrapped'
 gem 'rest-client'
 gem 'faker'
+gem 'ransack'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -1,0 +1,10 @@
+<div class="summary-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p>Total bookings: <%= bookings.count %></p>
+      <p>Total revenue: <%= number_to_currency(total_revenue(bookings), unit: "", precision: 2) %> BRL</p>
+      <p>Total fee: <%= number_to_currency(total_fee(bookings), unit: "", precision: 2) %> BRL</p>
+      <p>Earnings: <%= number_to_currency(total_earnings(bookings), unit: "", precision: 2) %> BRL</p>
+    </div>
+  </div>
+</div>
