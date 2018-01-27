@@ -20,9 +20,9 @@ One of the prerequisites of the challenge was to have an user login in order to 
 
 For testing the app, these are the logins:
 
-janelle_sipes@haag.info
-kaycee@mayert.co
-andy.kaulke@willhayes.io
+user 1: janelle_sipes@haag.info
+user 2: kaycee@mayert.co
+user 3: andy.kaulke@willhayes.io
 
 password: luvcode6
 
@@ -38,3 +38,5 @@ To speed up the development I used a few Le Wagon UI components, like the naviga
 
 ## Deployment
 The app was deployed to Heroku at this address:
+
+https://luvotels-buzzmeekz.herokuapp.com/
