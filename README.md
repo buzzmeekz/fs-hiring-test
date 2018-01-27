@@ -2,6 +2,8 @@
 ## Foreword
 This is my solution to the Luvotels full-stack practical test.
 
+For more details see here: https://github.com/luvotels/fs-hiring-test
+
 ## User journey
   * The motel owner needs to be able to login and see his/her reports.
   * The reports must contain:
@@ -20,14 +22,14 @@ One of the prerequisites of the challenge was to have an user login in order to 
 
 For testing the app, these are the logins:
 
-user 1: janelle_sipes@haag.info
-user 2: kaycee@mayert.co
-user 3: andy.kaulke@willhayes.io
+user 1: bobbie@yundt.info
+user 2: ismael@breitenbergwilliamson.org
+user 3: roman@runolfsdottir.net
 
 password: luvcode6
 
 ## Design
-For the design I tried to follow the style of the Luvotels site as much as possible. I used the same color palette and font.
+For the design I tried to follow the style of the [Luvotels site](https://www.luvotels.com/) as much as possible. I used the same color palette and font.
 
 To speed up the development I used a few Le Wagon UI components, like the navigation bar and also the list items.
 
@@ -35,6 +37,7 @@ To speed up the development I used a few Le Wagon UI components, like the naviga
   * Add pagination to the booking list.
   * Add filtering so that the user can view the bookings for a specific room or date range.
   * Make it possible for one user to have multiple motels.
+  * Add authorization (pundit).
 
 ## Deployment
 The app was deployed to Heroku at this address:
