@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
+
   def show
-    @bookings = Booking.where(motel_id: params[:motel_id])
-    @booking = @bookings.to_a.select { |o| o.id == params[:id].to_i }.first
+    @bookings = Rails.cache.fetch("bookings") { Booking.where(motel_id: params[:motel_id]).collect }
+    @booking = @bookings.select { |o| o.id == params[:id].to_i }.first
+
     @motel = Motel.find(params[:motel_id])
     respond_to do |format|
       format.js
@@ -9,7 +11,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.where(motel_id: params[:motel_id])
+    @bookings = Rails.cache.fetch("bookings") { Booking.where(motel_id: params[:motel_id]) }
     @motel = Motel.find(params[:motel_id])
   end
 end

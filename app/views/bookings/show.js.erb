@@ -3,7 +3,7 @@ console.log('Hellooooooo');
 $(".modal-room").html("Room: <%= @booking.room.name %>");
 $(".modal-motel").html("Motel: <%= @motel.name %>");
 $(".modal-amount").html("Amount: <%= '%.2f' % (@booking.amount_centavos / 100) %> BRL");
-$(".modal-fee").html("Booking fee (<%= @booking.fee_percentage %>%): <%= calculate_fee(@booking) %> BRL");
+$(".modal-fee").html("Booking fee (<%= @booking.fee_percentage %>%): <%= number_to_currency(calculate_fee(@booking), unit: "", precision: 2) %> BRL");
 $(".modal-period").html("Period: <%= @booking.booking_period %>");
 $(".modal-date").html("Date: <%= @booking.paid_at.to_time.strftime("%d/%m/%y") %>");
 $(".modal-code").html("Booking code: <%= @booking.booking_code %>");
