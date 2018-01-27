@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :bookings, only: [ :show, :index ]
-
-  get 'motels/show'
-
-  get 'motels/index'
+  resources :motels, only: [ :show, :index ] do
+    resources :rooms, only: [:index, :show]
+    resources :bookings, only: [ :show, :index ]
+  end
 
   devise_for :users
   

@@ -2,6 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    bookings_index_path
+    motel_bookings_path(current_user.motels.first)
   end
 end

@@ -1,0 +1,14 @@
+<div class="summary-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 text-center">
+      <%= image_tag("#{@motel.logo}", :alt => "#{@motel.name}", size: "150x150") %>
+    </div>
+    <div class="col-xs-12 col-sm-6 text-center">
+      <p>Total bookings: <%= bookings.count %></p>
+      <p>Total revenue: <%= number_to_currency(total_revenue(bookings), unit: "", precision: 2) %> BRL</p>
+      <p>Total fee: <%= number_to_currency(total_fee(bookings), unit: "", precision: 2) %> BRL</p>
+      <p>Earnings: <%= number_to_currency(total_earnings(bookings), unit: "", precision: 2) %> BRL</p>
+    </div>
+    
+  </div>
+</div>
